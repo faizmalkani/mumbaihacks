@@ -213,7 +213,7 @@ function Services()
                 className="mt-24 sm:mt-32 lg:mt-40"
             >
                 <p>
-                    Don't see your question here? Reach out to us at hi@mumbaihacks.com
+                    Don&apos;t see your question here? Reach out to us at hi@mumbaihacks.com
                 </p>
             </SectionIntro>
             <Container className="mt-16">
