@@ -34,7 +34,7 @@ function Clients()
             <Container>
                 <div className="flex items-center gap-x-8">
                     <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-                        Sponsors for MumbaiHacks 2025
+                        Sponsors for MumbaiHacks 2024
                     </h2>
                 </div>
                 <FadeInStagger faster>
