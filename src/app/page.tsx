@@ -166,7 +166,7 @@ function Services()
         <>
             <SectionIntro
                 eyebrow="FAQs"
-                title="Everything you need to know about this year's MumbaiHacks"
+                title="Everything you need to know about this year&apos;s MumbaiHacks"
                 className="mt-24 sm:mt-32 lg:mt-40"
             >
                 <p>
