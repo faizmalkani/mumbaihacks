@@ -33,13 +33,12 @@ export function Offices({
     <ul role="list" {...props}>
       <li>
         <Office name="Participant details" invert={invert}>
-          Emails and phone numbers of your team, which can be between 2-4 people
+          Emails, LinkedIn, work/college details, and phone numbers of your team, which can be between 2-4 people.
         </Office>
       </li>
       <li>
         <Office name="Track selection" invert={invert}>
-            Choose a track that aligns with your project idea. This cannot be
-            changed later.
+            Choose a track that aligns with the project idea which you will build. This cannot be changed later.
         </Office>
       </li>
     </ul>

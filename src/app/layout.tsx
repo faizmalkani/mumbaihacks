@@ -5,7 +5,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: 'MumbaiHacks',
-    default: 'Largest hackathon in India',
+    default: 'MumbaiHacks 2025 - Where Innovation Meets Impact',
   },
 }
 

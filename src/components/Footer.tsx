@@ -10,28 +10,27 @@ const navigation = [
     {
         title: 'TEAM',
         links: [
-            { title: 'Website', href: '/' },
-            { title: 'Twitter', href: '/' },
-            { title: 'Instagram', href: '/' },
-            { title: 'LinkedIn', href: '/' },
+            { title: 'Website', href: 'https://mumbaitech.team/' },
+            { title: 'Twitter', href: 'https://twitter.com/mumbai_tech_' },
+            { title: 'Instagram', href: 'https://www.instagram.com/mumbai_tech_/' },
+            { title: 'LinkedIn', href: 'https://www.linkedin.com/company/mumbaitech' },
         ],
     },
     {
         title: 'Made in Mumbai',
         links: [
-            { title: 'Website', href: '/' },
-            { title: 'Twitter', href: '/' },
-            { title: 'Instagram', href: '/' },
-            { title: 'LinkedIn', href: '/' },
+            { title: 'Website', href: 'https://madeinmumbai.org/' },
+            { title: 'Twitter', href: 'https://x.com/madeinmumbai_' },
+            { title: 'Instagram', href: 'https://www.instagram.com/madeinmumbai_' },
+            { title: 'LinkedIn', href: 'https://www.linkedin.com/company/made-in-mumbai' },
         ],
     },
     {
         title: 'MumbaiHacks',
         links: [
             { title: 'Sign Up', href: '/' },
-            { title: 'Reach out', href: '/' },
-            { title: 'Code of Conduct', href: '/' },
-            { title: 'Privacy Policy', href: '/' },
+            { title: 'Reach out', href: 'mailto:hi@mumbaihacks.com' },
+            { title: 'Code of Conduct', href: 'https://docs.google.com/document/d/1QgEsxP_6ekHjR9CSlcOAiS1OdDVqdjPLHkWJdFWi92k/edit?usp=sharing' },
         ],
     },
 ]
@@ -51,7 +50,7 @@ function Navigation()
                                 <li key={linkIndex} className="mt-4">
                                     <Link
                                         href={link.href}
-                                        className="transition hover:text-neutral-950"
+                                        className="transition duration-400 hover:text-neutral-950"
                                     >
                                         {link.title}
                                     </Link>
