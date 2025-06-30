@@ -230,7 +230,7 @@ function Services()
                     </div>
                     <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-132 lg:pl-4">
 
-                        <ListItem title="What is the format of this year's MumbaiHacks?">
+                        <ListItem title="What is the format of this year's MumbaiHacks">
                             MumbaiHacks 2025 will have an online round in the month of August,
                             where participants can submit their projects online.
                             The top teams will be selected to participate in the final round, which will be held in Mumbai on October 7, 2025.
