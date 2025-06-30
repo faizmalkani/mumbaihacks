@@ -44,9 +44,88 @@ function Clients()
                         <Image src={logoGoogle} alt="Google for Developers" className='h-11 w-auto col-span-2' unoptimized />
                     </FadeIn>
                 </FadeInStagger>
-                <Image src={imageGuinness} alt="Guinness World Record" className="mt-24 w-full rounded-3xl" unoptimized />
             </Container>
         </div>
+    )
+}
+
+function Timelines()
+{
+    return (
+        <>
+            <SectionIntro
+                title="Outline of MumbaiHacks 2025"
+                className="mt-24 sm:mt-32 lg:mt-40 cursor-default"
+            >
+                <p>
+                    This year, MumbaiHacks will be held in two phases: all participants will have until August 31 to submit their projects online, and the top teams will be selected to participate in the final round, which will be held in Mumbai on October 7, 2025.
+                </p>
+            </SectionIntro>
+            <Container className="mt-16 cursor-default">
+                <FadeInStagger className="flex lg:hidden w-full">
+                    <FadeIn className="flex w-full">
+                        <div aria-hidden="true" className="flex flex-row gap-x-16 px-8 mt-6 w-full">
+                            <div className="overflow-hidden rounded-full bg-gray-200">
+                                <div style={{ height: '11%' }} className="w-2 rounded-full bg-gray-900" />
+                            </div>
+                            <div className="my-6 grid grid-rows-5 gap-y-8 text-sm font-medium text-gray-800">
+                                <div className="flex flex-col font-bold">
+                                    <span>Register to participate</span>
+                                    <span className='mt-1 text-sm text-gray-500'>July 1st to August 1st</span>
+                                </div>
+                                <div className="flex flex-col">
+                                    <span>Work on your project</span>
+                                    <span className='mt-1 text-sm text-gray-500'>August 1st to 31st</span>
+                                </div>
+                                <div className="flex flex-col">
+                                    <span>Evaluations</span>
+                                    <span className='mt-1 text-sm text-gray-500'>September 1st to 10th</span>
+                                </div>
+                                <div className="flex flex-col">
+                                    <span>Round 1 Results</span>
+                                    <span className='mt-1 text-sm text-gray-500'>September 11th</span>
+                                </div>
+                                <div className="flex flex-col">
+                                    <span>Round 2, in-person</span>
+                                    <span className='mt-1 text-sm text-gray-500'>October 7th</span>
+                                </div>
+                            </div>
+                        </div>
+                    </FadeIn>
+                </FadeInStagger>
+                <FadeInStagger className="hidden lg:flex w-full">
+                    <FadeIn className="flex w-full">
+                        <div aria-hidden="true" className="mt-6 w-full">
+                            <div className="overflow-hidden rounded-full bg-gray-200">
+                                <div style={{ width: '2%' }} className="h-2 rounded-full bg-gray-900" />
+                            </div>
+                            <div className="mt-6 grid grid-cols-5 text-sm font-medium text-gray-800">
+                                <div className="flex flex-col font-bold">
+                                    <span>Register to participate</span>
+                                    <span className='mt-1 text-sm text-gray-500'>July 1st to August 1st</span>
+                                </div>
+                                <div className="flex flex-col text-center">
+                                    <span>Work on your project</span>
+                                    <span className='mt-1 text-sm text-gray-500'>August 1st to 31st</span>
+                                </div>
+                                <div className="flex flex-col text-center">
+                                    <span>Evaluations</span>
+                                    <span className='mt-1 text-sm text-gray-500'>September 1st to 10th</span>
+                                </div>
+                                <div className="flex flex-col text-center">
+                                    <span>Round 1 Results</span>
+                                    <span className='mt-1 text-sm text-gray-500'>September 11th</span>
+                                </div>
+                                <div className="flex flex-col text-right">
+                                    <span>Round 2, in-person</span>
+                                    <span className='mt-1 text-sm text-gray-500'>October 7th</span>
+                                </div>
+                            </div>
+                        </div>
+                    </FadeIn>
+                </FadeInStagger>
+            </Container>
+        </>
     )
 }
 
@@ -119,41 +198,6 @@ function CaseStudies({
                             </p>
                         </article>
                     </FadeIn>
-                    {/* {caseStudies.map((caseStudy) => (
-                        <FadeIn key={caseStudy.href} className="flex">
-                            <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                                <h3>
-                                    <Link href={caseStudy.href}>
-                                        <span className="absolute inset-0 rounded-3xl" />
-                                        <Image
-                                            src={caseStudy.logo}
-                                            alt={caseStudy.client}
-                                            className="h-16 w-16"
-                                            unoptimized
-                                        />
-                                    </Link>
-                                </h3>
-                                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                                    <time
-                                        dateTime={caseStudy.date.split('-')[0]}
-                                        className="font-semibold"
-                                    >
-                                        {caseStudy.date.split('-')[0]}
-                                    </time>
-                                    <span className="text-neutral-300" aria-hidden="true">
-                                        /
-                                    </span>
-                                    <span>Case study</span>
-                                </p>
-                                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                                    {caseStudy.title}
-                                </p>
-                                <p className="mt-4 text-base text-neutral-600">
-                                    {caseStudy.description}
-                                </p>
-                            </article>
-                        </FadeIn>
-                    ))} */}
                 </FadeInStagger>
             </Container>
         </>
@@ -170,7 +214,7 @@ function Services()
                 className="mt-24 sm:mt-32 lg:mt-40"
             >
                 <p>
-                    Don&apos;t see your question here? Reach out to us at hi@mumbaihacks.com
+                    Don&apos;t see your question here? Reach out to us at <a href="mailto:hi@mumbaihacks.com">hi@mumbaihacks.com</a>
                 </p>
             </SectionIntro>
             <Container className="mt-16">
@@ -265,28 +309,36 @@ export default async function Home()
                         </Button>
                     </FadeIn>
 
-                    <div className='col-span-5 hidden lg:block lg:col-span-2 lg:px-8'>
-                        <Image src={imageMasthead} width={100} height={400} alt="" className="-mt-4 w-auto h-full rounded-3xl" unoptimized />
+                    <div className='col-span-5 hidden lg:block lg:col-span-2 pl-16'>
+                        <Image src={imageMasthead} width={100} height={400} alt="" className="-mt-4 w-full h-auto rounded-3xl" unoptimized />
                     </div>
                 </div>
             </Container>
 
+            <div className='px-6 lg:px-8 w-full max-w-7xl mx-auto'>
+                <Image src={imageGuinness} alt="Guinness World Record" className="mt-36 w-full rounded-xl lg:rounded-3xl mx-auto" unoptimized />
+            </div>
+
             <Clients />
 
-            <CaseStudies caseStudies={caseStudies} />
+            <Timelines />
 
-            {/* <Testimonial
-                className="mt-24 sm:mt-32 lg:mt-40"
-                client={{ name: 'Phobia', logo: logoPhobiaDark }}
-            >
-                The team at Studio went above and beyond with our onboarding, even
-                finding a way to access the user’s microphone without triggering one of
-                those annoying permission dialogs.
-            </Testimonial> */}
+            {/* Uncomment the following line to display case studies */}
+
+            {/* <CaseStudies caseStudies={caseStudies} /> */}
 
             <Services />
 
             <ContactSection />
+
+            <Testimonial
+                className="mt-24 sm:mt-32 lg:mt-40"
+                client={{ name: 'Varun - Winner, MumbaiHacks 2024' }}
+            >
+                Winning the Mumbai Hacks 2024 was an incredibly rewarding experience that pushed me to grow both technically and creatively. With over 2,000 developers participating, the competition was intense, bringing together some of the brightest minds in the country to solve real-world challenges.
+            </Testimonial>
+
+
         </RootLayout>
     )
 }
