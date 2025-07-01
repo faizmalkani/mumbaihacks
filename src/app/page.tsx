@@ -323,6 +323,11 @@ export default async function Home()
 
             <Timelines />
 
+            <div className='px-6 lg:px-8 w-full max-w-7xl mx-auto'>
+                <iframe className="w-full aspect-video mt-36 rounded-xl lg:rounded-3xl mx-auto" src="https://www.youtube.com/embed/wcUki2Bizzg?si=fFy1S_tm9H7KINqJ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <span className='w-full text-center block mx-auto mt-4 text-gray-500'>A glimpse of MumbaiHacks 2024</span>
+            </div>
+
             {/* Uncomment the following line to display case studies */}
 
             {/* <CaseStudies caseStudies={caseStudies} /> */}
