@@ -58,7 +58,7 @@ function Timelines()
                 className="mt-24 sm:mt-32 lg:mt-40 cursor-default"
             >
                 <p>
-                    This year, MumbaiHacks will be held in two phases: all participants will have until August 31 to submit their projects online, and the top teams will be selected to participate in the final round, which will be held in Mumbai on October 7, 2025.
+                    This year, MumbaiHacks will be held in two phases: all participants will have until August 31 to submit their projects online, and the top teams will be selected to participate in the final round, which will be held in Mumbai on October 4th and 5th, 2025.
                 </p>
             </SectionIntro>
             <Container className="mt-16 cursor-default">
@@ -71,23 +71,23 @@ function Timelines()
                             <div className="my-6 grid grid-rows-5 gap-y-8 text-sm font-medium text-gray-800">
                                 <div className="flex flex-col font-bold">
                                     <span>Register to participate</span>
-                                    <span className='mt-1 text-sm text-gray-500'>July 1st to August 1st</span>
+                                    {/* <span className='mt-1 text-sm text-gray-500'>July 1st to August 1st</span> */}
                                 </div>
                                 <div className="flex flex-col">
                                     <span>Work on your project</span>
-                                    <span className='mt-1 text-sm text-gray-500'>August 1st to 31st</span>
+                                    {/* <span className='mt-1 text-sm text-gray-500'>August 1st to 31st</span> */}
                                 </div>
                                 <div className="flex flex-col">
                                     <span>Evaluations</span>
-                                    <span className='mt-1 text-sm text-gray-500'>September 1st to 10th</span>
+                                    {/* <span className='mt-1 text-sm text-gray-500'>September 1st to 10th</span> */}
                                 </div>
                                 <div className="flex flex-col">
                                     <span>Round 1 Results</span>
-                                    <span className='mt-1 text-sm text-gray-500'>September 11th</span>
+                                    {/* <span className='mt-1 text-sm text-gray-500'>September 11th</span> */}
                                 </div>
                                 <div className="flex flex-col">
                                     <span>Round 2, in-person</span>
-                                    <span className='mt-1 text-sm text-gray-500'>October 7th</span>
+                                    {/* <span className='mt-1 text-sm text-gray-500'>October 7th</span> */}
                                 </div>
                             </div>
                         </div>
@@ -102,23 +102,23 @@ function Timelines()
                             <div className="mt-6 grid grid-cols-5 text-sm font-medium text-gray-800">
                                 <div className="flex flex-col font-bold">
                                     <span>Register to participate</span>
-                                    <span className='mt-1 text-sm text-gray-500'>July 1st to August 1st</span>
+                                    {/* <span className='mt-1 text-sm text-gray-500'>July 1st to August 1st</span> */}
                                 </div>
                                 <div className="flex flex-col text-center">
                                     <span>Work on your project</span>
-                                    <span className='mt-1 text-sm text-gray-500'>August 1st to 31st</span>
+                                    {/* <span className='mt-1 text-sm text-gray-500'>August 1st to 31st</span> */}
                                 </div>
                                 <div className="flex flex-col text-center">
                                     <span>Evaluations</span>
-                                    <span className='mt-1 text-sm text-gray-500'>September 1st to 10th</span>
+                                    {/* <span className='mt-1 text-sm text-gray-500'>September 1st to 10th</span> */}
                                 </div>
                                 <div className="flex flex-col text-center">
                                     <span>Round 1 Results</span>
-                                    <span className='mt-1 text-sm text-gray-500'>September 11th</span>
+                                    {/* <span className='mt-1 text-sm text-gray-500'>September 11th</span> */}
                                 </div>
                                 <div className="flex flex-col text-right">
                                     <span>Round 2, in-person</span>
-                                    <span className='mt-1 text-sm text-gray-500'>October 7th</span>
+                                    {/* <span className='mt-1 text-sm text-gray-500'>October 7th</span> */}
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@ function Services()
                         <ListItem title="What is the format of this year's MumbaiHacks">
                             MumbaiHacks 2025 will have an online round in the month of August,
                             where participants can submit their projects online.
-                            The top teams will be selected to participate in the final round, which will be held in Mumbai on October 7, 2025.
+                            The top teams will be selected to participate in the final round, which will be held in Mumbai on October 4th-5th, 2025.
                             The final round will be a 24-hour hackathon where teams will continue building their projects and present them to the judges.
                         </ListItem>
                         <ListItem title="Is the event free to attend">
@@ -291,7 +291,7 @@ export default async function Home()
                                     <path d="M3 9H21M9 15L11 17L15 13M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                                 <p>
-                                    August 1 to October 7, 2025
+                                    Round 1: August, Round 2: October 4th, 2025
                                 </p>
                             </div>
                             <div className='flex flex-row items-center gap-x-4'>
