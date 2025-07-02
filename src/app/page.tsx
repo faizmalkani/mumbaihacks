@@ -34,7 +34,7 @@ function Clients()
             <Container>
                 <div className="flex items-center gap-x-8">
                     <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-                        Sponsors for MumbaiHacks 2024
+                        Partners for MumbaiHacks 2024
                     </h2>
                 </div>
                 <FadeInStagger faster>
@@ -58,7 +58,7 @@ function Timelines()
                 className="mt-24 sm:mt-32 lg:mt-40 cursor-default"
             >
                 <p>
-                    This year, MumbaiHacks will be held in two phases: all participants will have until August 31 to submit their projects online, and the top teams will be selected to participate in the final round, which will be held in Mumbai on October 4th and 5th, 2025.
+                    This year, MumbaiHacks will be held in two rounds.<br /><br /> Round 1 will be online, until the end of August. The top teams will then be invited to the final round in Mumbai on October 4th-5th, 2025.<br /><br /> The final round will be a 24-hour hackathon where teams will continue building their projects and present them to the judges.
                 </p>
             </SectionIntro>
             <Container className="mt-16 cursor-default">
@@ -142,64 +142,9 @@ function CaseStudies({
                 className="mt-24 sm:mt-32 lg:mt-40 cursor-default"
             >
                 <p>
-                    Get ready to dive into the exciting tracks we have lined up for
-                    MumbaiHacks 2025! Each track is designed to challenge your skills and
-                    creativity, pushing you to build innovative solutions that can make a
-                    real impact.
+                    To be announced soon!
                 </p>
             </SectionIntro>
-            <Container className="mt-16 cursor-default">
-                <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-                    <FadeIn className="flex">
-                        <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition sm:p-8">
-                            <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                                <span>Track 1</span>
-                                {/* <span className="text-neutral-300" aria-hidden="true">
-                                    /
-                                </span> */}
-                            </p>
-                            <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                                GenAI
-                            </p>
-                            <p className="mt-4 text-base text-neutral-600">
-                                Dive into the world of Generative AI and explore how it can be used to build applications that leverage the power of AI to generate text, images, and more.
-                            </p>
-                        </article>
-                    </FadeIn>
-                    <FadeIn className="flex">
-                        <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition sm:p-8">
-                            <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                                <span>Track 2</span>
-                                {/* <span className="text-neutral-300" aria-hidden="true">
-                                    /
-                                </span> */}
-                            </p>
-                            <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                                Agentic AI
-                            </p>
-                            <p className="mt-4 text-base text-neutral-600">
-                                Explore the vertical of Agentic AI, where systems act autonomously to solve complex problems, as well as learn, adapt, and make decisions all on their own.
-                            </p>
-                        </article>
-                    </FadeIn>
-                    <FadeIn className="flex">
-                        <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition sm:p-8">
-                            <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                                <span>Track 3</span>
-                                {/* <span className="text-neutral-300" aria-hidden="true">
-                                    /
-                                </span> */}
-                            </p>
-                            <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                                No limits
-                            </p>
-                            <p className="mt-4 text-base text-neutral-600">
-                                Not building something AI? Use this track to push and build anything you can imagine, from innovative web applications to groundbreaking hardware projects.
-                            </p>
-                        </article>
-                    </FadeIn>
-                </FadeInStagger>
-            </Container>
         </>
     )
 }
@@ -270,17 +215,13 @@ export default async function Home()
 
     return (
         <RootLayout>
-            <Container className="mt-16 lg:mt-32">
+            <Container className="mt-28 lg:mt-32">
                 <div className="grid grid-cols-5 gap-x-8 gap-y-16 lg:gap-y-0">
 
                     <FadeIn className="flex flex-col justify-start col-span-5 lg:col-span-3 max-w-3xl pr-0 lg:pr-24 gap-y-8">
-                        <div className='flex flex-row items-center gap-x-5'>
-                            <Image src={logoTEAM} alt="TEAM" width={100} height={100} className="h-10 w-auto" unoptimized />
-                            <span>x</span>
-                            <Image src={logoMiM} alt="MumbaiHacks" width={100} height={100} className="h-11 w-auto ml-1" unoptimized />
-                        </div>
+                        
                         <h1 className="font-display text-5xl lg:text-7xl font-medium text-balance text-neutral-950">
-                            Where Innovation Meets Impact
+                            The world&apos;s largest GenAI hackathon is back!
                         </h1>
                         <div className="flex flex-col text-lg text-gray-700 gap-y-4">
                             <p>
@@ -288,23 +229,26 @@ export default async function Home()
                             </p>
                             <div className='flex flex-row items-center gap-x-4'>
                                 <svg className='h-6 w-auto' width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 9H21M9 15L11 17L15 13M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3 9H21M9 15L11 17L15 13M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 <p>
-                                    Round 1: August, Round 2: October 4th, 2025
+                                    Round 1: Online, August
                                 </p>
                             </div>
                             <div className='flex flex-row items-center gap-x-4'>
+                                {/* <svg className='h-6 w-auto' width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg> */}
                                 <svg className='h-6 w-auto' width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3 9H21M9 15L11 17L15 13M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 <p>
-                                    Mumbai
+                                    Round 2: Mumbai, October 4th-5th
                                 </p>
                             </div>
                         </div>
-                        <Button className="self-start" href="/hackathon">
+                        <Button className="self-start" href="https://mumbaihacks25-round1.devfolio.co/">
                             Sign up now for free
                         </Button>
                     </FadeIn>
@@ -322,19 +266,20 @@ export default async function Home()
             <Clients />
 
             <Timelines />
+            
+            <CaseStudies caseStudies={caseStudies} />
 
-            <div className='px-6 lg:px-8 w-full max-w-7xl mx-auto'>
-                <iframe className="w-full aspect-video mt-36 rounded-xl lg:rounded-3xl mx-auto" src="https://www.youtube.com/embed/wcUki2Bizzg?si=fFy1S_tm9H7KINqJ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                <span className='w-full text-center block mx-auto mt-4 text-gray-500'>A glimpse of MumbaiHacks 2024</span>
+            <div className='w-full max-w-7xl mx-auto'>
+                <SectionIntro
+                    title="A glimpse of MumbaiHacks 2024"
+                    className="mt-24 sm:mt-32 lg:mt-40 cursor-default"
+                >
+                </SectionIntro>
+                <div className='px-6 lg:px-8 mt-16 '>
+                    <iframe className="w-full aspect-video rounded-xl lg:rounded-3xl mx-auto" src="https://www.youtube.com/embed/wcUki2Bizzg?si=fFy1S_tm9H7KINqJ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </div>
+
             </div>
-
-            {/* Uncomment the following line to display case studies */}
-
-            {/* <CaseStudies caseStudies={caseStudies} /> */}
-
-            <Services />
-
-            <ContactSection />
 
             <Testimonial
                 className="mt-24 sm:mt-32 lg:mt-40"
@@ -342,6 +287,12 @@ export default async function Home()
             >
                 Winning the Mumbai Hacks 2024 was an incredibly rewarding experience that pushed me to grow both technically and creatively. With over 2,000 developers participating, the competition was intense, bringing together some of the brightest minds in the country to solve real-world challenges.
             </Testimonial>
+
+
+
+            <Services />
+
+            <ContactSection />
 
 
         </RootLayout>

@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useId, useRef, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
@@ -13,6 +14,8 @@ import { GridPattern } from '@/components/GridPattern'
 import { Logo } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
+import logoMiM from '@/images/logo_mim_dark.svg'
+import logoTEAM from '@/images/logo_team_dark.svg'
 
 const RootLayoutContext = createContext<{
     logoHovered: boolean
@@ -58,7 +61,7 @@ function Header({
 
     return (
         <Container>
-            <div className="flex items-center gap-x-16 justify-between">
+            <div className="flex flex-wrap items-center gap-x-16 gap-y-8 justify-between">
                 <Link
                     href="/"
                     aria-label="Home"
@@ -69,7 +72,12 @@ function Header({
                     <Logo className="w-full sm:block" invert={invert} filled={logoHovered} />
 
                 </Link>
-                
+                <div className='flex w-auto flex-row items-center gap-x-5'>
+                    <Image src={logoTEAM} alt="TEAM" width={100} height={100} className="h-7 lg:h-9 w-auto" unoptimized />
+                    <span>x</span>
+                    <Image src={logoMiM} alt="MumbaiHacks" width={100} height={100} className="h-8 lg:h-10 w-auto ml-1" unoptimized />
+                </div>
+
                 {/* <div className="flex items-center gap-x-8">
                     
                     <Button className='!hidden lg:!block' href="/contact" invert={invert}>
@@ -238,7 +246,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode })
                             />
                         </div>
                         <Navigation />
-                        
+
                     </motion.div>
                 </motion.div>
             </header>

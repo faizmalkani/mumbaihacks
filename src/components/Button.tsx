@@ -33,7 +33,7 @@ export function Button({
   }
 
   return (
-    <Link className={className} {...props}>
+    <Link target='_blank' className={className} {...props}>
       {inner}
     </Link>
   )

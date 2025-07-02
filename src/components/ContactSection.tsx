@@ -13,7 +13,7 @@ export function ContactSection() {
               Participate in MumbaiHacks 2025
             </h2>
             <div className="mt-6 flex">
-              <Button href="/" invert>
+              <Button href="https://mumbaihacks25-round1.devfolio.co/" invert>
                 Sign up for free
               </Button>
             </div>

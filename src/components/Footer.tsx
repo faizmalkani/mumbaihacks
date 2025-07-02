@@ -28,7 +28,7 @@ const navigation = [
     {
         title: 'MumbaiHacks',
         links: [
-            { title: 'Sign Up', href: '/' },
+            { title: 'Sign Up', href: 'https://mumbaihacks25-round1.devfolio.co/' },
             { title: 'Reach out', href: 'mailto:hi@mumbaihacks.com' },
             { title: 'Code of Conduct', href: 'https://docs.google.com/document/d/1QgEsxP_6ekHjR9CSlcOAiS1OdDVqdjPLHkWJdFWi92k/edit?usp=sharing' },
         ],
