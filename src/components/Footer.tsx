@@ -11,7 +11,7 @@ const navigation = [
         title: 'TEAM',
         links: [
             { title: 'Website', href: 'https://mumbaitech.team/' },
-            { title: 'Twitter', href: 'https://twitter.com/mumbai_tech_' },
+            { title: 'X / Twitter', href: 'https://twitter.com/mumbai_tech_' },
             { title: 'Instagram', href: 'https://www.instagram.com/mumbai_tech_/' },
             { title: 'LinkedIn', href: 'https://www.linkedin.com/company/mumbaitech' },
         ],
@@ -20,7 +20,7 @@ const navigation = [
         title: 'Made in Mumbai',
         links: [
             { title: 'Website', href: 'https://madeinmumbai.org/' },
-            { title: 'Twitter', href: 'https://x.com/madeinmumbai_' },
+            { title: 'X / Twitter', href: 'https://x.com/madeinmumbai_' },
             { title: 'Instagram', href: 'https://www.instagram.com/madeinmumbai_' },
             { title: 'LinkedIn', href: 'https://www.linkedin.com/company/made-in-mumbai' },
         ],
@@ -28,7 +28,7 @@ const navigation = [
     {
         title: 'MumbaiHacks',
         links: [
-            { title: 'Sign Up', href: 'https://mumbaihacks25-round1.devfolio.co/' },
+            { title: 'Register', href: 'https://mumbaihacks25-round1.devfolio.co/' },
             { title: 'Reach out', href: 'mailto:hi@mumbaihacks.com' },
             { title: 'Code of Conduct', href: 'https://docs.google.com/document/d/1QgEsxP_6ekHjR9CSlcOAiS1OdDVqdjPLHkWJdFWi92k/edit?usp=sharing' },
         ],
@@ -83,16 +83,16 @@ function NewsletterForm()
     return (
         <form className="max-w-sm">
             <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-                Sign up!
+                Ready to be a part of MumbaiHacks 2025?
             </h2>
             <p className="mt-4 text-sm text-neutral-700">
-                Sign up for the event and get ready to start building!
+                Join the event and prepare to start building!
             </p>
             <Button
                 href="/"
                 className="mt-6 rounded-2xl bg-neutral-950 px-4 py-2 text-base font-semibold text-white transition hover:bg-neutral-800"
             >
-                Sign up for free
+                Register now for free!
             </Button>
             {/* <div className="relative mt-6">
         <input
