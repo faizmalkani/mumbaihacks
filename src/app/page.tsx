@@ -58,7 +58,7 @@ function Timelines()
                 className="mt-24 sm:mt-32 lg:mt-40 cursor-default"
             >
                 <p>
-                    This year, MumbaiHacks will be held in two rounds.<br /><br /> <b>Round 1 will be online, until the end of August</b>. The top teams will then be invited to the <b>final round in Mumbai on October 4th-5th, 2025.</b><br /><br /> The final round will be a 24-hour hackathon where teams will continue building their projects and present them to the judges.
+                    This year, MumbaiHacks will be held in two rounds.<br /><br /> <b>Round 1 will be online, from August 12th to 31st.</b>. The top teams will then be invited to the <b>final round in Mumbai on October 4th-5th, 2025.</b><br /><br /> The final round will be a 24-hour hackathon where teams will continue building their projects and present them to the judges.
                 </p>
             </SectionIntro>
             <Container className="mt-16 cursor-default">
@@ -179,11 +179,11 @@ function Services()
                             MumbaiHacks 2025 will have an online round in the month of August,
                             where participants can submit their projects online.
                             The top teams will be selected to participate in the final round, which will be held in Mumbai on October 4th-5th, 2025.
-                            The final round will be a 24-hour hackathon where teams will continue building their projects and present them to the judges.
+                            The final round will be a 24-hour hackathon where teams will continue building their projects from Round 1 and present them to the judges.
                         </ListItem>
                         <ListItem title="Is the event free to attend">
                             Yes! The event is completely free to attend, and we encourage
-                            everyone to sign up and participate. MumbaiHacks has always
+                            everyone to apply and participate. MumbaiHacks has always
                             been a free event, and we want to keep it that way.
                         </ListItem>
                         <ListItem title="Who can participate">
@@ -219,7 +219,7 @@ export default async function Home()
                 <div className="grid grid-cols-5 gap-x-8 gap-y-16 lg:gap-y-0">
 
                     <FadeIn className="flex flex-col justify-start col-span-5 lg:col-span-3 max-w-3xl pr-0 lg:pr-24 gap-y-8">
-                        
+
                         <h1 className="font-display text-5xl lg:text-7xl font-medium text-balance text-neutral-950">
                             The world&apos;s largest GenAI hackathon is back!
                         </h1>
@@ -232,7 +232,7 @@ export default async function Home()
                                     <path d="M3 9H21M9 15L11 17L15 13M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 <p>
-                                    Round 1: Online, August 2025
+                                    Round 1: Online, August 12th to 31st 2025
                                 </p>
                             </div>
                             <div className='flex flex-row items-center gap-x-4'>
@@ -244,13 +244,16 @@ export default async function Home()
                                     <path d="M3 9H21M9 15L11 17L15 13M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 <p>
-                                    Round 2: Mumbai, October 4th-5th 2025
+                                    Round 2: Mumbai, October 4th to 5th 2025
                                 </p>
                             </div>
                         </div>
-                        <Button className="self-start" href="https://mumbaihacks25-round1.devfolio.co/">
-                            Register now for free
-                        </Button>
+                        <div className='flex flex-col items-center w-fit gap-y-2'>
+                            <Button className="self-start" href="https://mumbaihacks25-round1.devfolio.co/">
+                                Register now for free
+                            </Button>
+                            <span className='text-gray-500 text-sm'>Takes ~3 minutes</span>
+                        </div>
                     </FadeIn>
 
                     <div className='col-span-5 hidden lg:block lg:col-span-2 pl-16'>
@@ -266,7 +269,7 @@ export default async function Home()
             <Clients />
 
             <Timelines />
-            
+
             <CaseStudies caseStudies={caseStudies} />
 
             <div className='w-full max-w-7xl mx-auto'>
@@ -283,7 +286,7 @@ export default async function Home()
 
             <Testimonial
                 className="mt-24 sm:mt-32 lg:mt-40"
-                client={{ name: 'Varun - Winner, MumbaiHacks 2024' }}
+                client={{ name: 'Varun Soni - Winner, MumbaiHacks 2024' }}
             >
                 Winning the Mumbai Hacks 2024 was an incredibly rewarding experience that pushed me to grow both technically and creatively. With over 2,000 developers participating, the competition was intense, bringing together some of the brightest minds in the country to solve real-world challenges.
             </Testimonial>
