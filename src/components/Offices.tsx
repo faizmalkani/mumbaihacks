@@ -36,11 +36,11 @@ export function Offices({
           Emails, LinkedIn, work/college details, and phone numbers of your team, which can be between 2-4 people.
         </Office>
       </li>
-      <li>
+      {/* <li>
         <Office name="Track selection" invert={invert}>
             Choose a track that aligns with the project idea which you will build. This cannot be changed later.
         </Office>
-      </li>
+      </li> */}
     </ul>
   )
 }
