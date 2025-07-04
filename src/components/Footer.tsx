@@ -92,7 +92,7 @@ function NewsletterForm()
                 href="/"
                 className="mt-6 rounded-2xl bg-neutral-950 px-4 py-2 text-base font-semibold text-white transition hover:bg-neutral-800"
             >
-                Register now for free!
+                Apply now for free!
             </Button>
             {/* <div className="relative mt-6">
         <input

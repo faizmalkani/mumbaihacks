@@ -33,7 +33,7 @@ export function Offices({
     <ul role="list" {...props}>
       <li>
         <Office name="Participant details" invert={invert}>
-          Emails, LinkedIn, work/college details, and phone numbers of your team, which can be between 2-4 people.
+          Emails, LinkedIn, work / college details, and your team members phone numbers to send them the sign-up link!
         </Office>
       </li>
       {/* <li>

@@ -14,7 +14,7 @@ export function ContactSection() {
             </h2>
             <div className="mt-6 flex">
               <Button href="https://mumbaihacks25-round1.devfolio.co/" invert>
-                Sign up for free
+                Apply now for free
               </Button>
             </div>
             <div className="mt-10 border-t border-white/10 pt-10">
