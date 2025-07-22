@@ -2,9 +2,8 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Logo } from '@/components/Logo'
-import { socialMediaProfiles } from '@/components/SocialMedia'
 import { Button } from './Button'
+import { sendGAEvent } from '@next/third-parties/google';
 
 const navigation = [
     {
@@ -28,7 +27,7 @@ const navigation = [
     {
         title: 'MumbaiHacks',
         links: [
-            { title: 'Register', href: 'https://mumbaihacks25-round1.devfolio.co/' },
+            { title: 'Apply Now', href: 'https://mumbaihacks25-round1.devfolio.co/' },
             { title: 'Reach out', href: 'mailto:hi@mumbaihacks.com' },
             { title: 'Code of Conduct', href: 'https://docs.google.com/document/d/1QgEsxP_6ekHjR9CSlcOAiS1OdDVqdjPLHkWJdFWi92k/edit?usp=sharing' },
         ],
@@ -37,21 +36,32 @@ const navigation = [
 
 function Navigation()
 {
+    const handleFooterNavLinkClick = (linkName: string, destination: string) =>
+    {
+
+        sendGAEvent({
+            event: 'footer_nav_link_click',
+            link_name: linkName,
+            link_destination: destination,
+        });
+
+    }
+
     return (
         <nav>
-            <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+            <ul role="list" className="gap-8 grid grid-cols-2 sm:grid-cols-3">
                 {navigation.map((section, sectionIndex) => (
                     <li key={sectionIndex}>
-                        <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+                        <div className="font-display font-semibold text-neutral-950 text-sm tracking-wider">
                             {section.title}
                         </div>
-                        <ul role="list" className="mt-4 text-sm text-neutral-700">
+                        <ul role="list" className="mt-4 text-neutral-700 text-sm">
                             {section.links.map((link, linkIndex) => (
                                 <li key={linkIndex} className="mt-4">
                                     <Link
                                         href={link.href}
-                                        className="transition duration-400 hover:text-neutral-950"
-                                    >
+                                        onClick={() => handleFooterNavLinkClick(link.title, link.href)}
+                                        className="hover:text-neutral-950 transition duration-400" >
                                         {link.title}
                                     </Link>
                                 </li>
@@ -64,54 +74,35 @@ function Navigation()
     )
 }
 
-function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>)
-{
-    return (
-        <svg viewBox="0 0 16 6" aria-hidden="true" {...props}>
-            <path
-                fill="currentColor"
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M16 3 10 .5v2H0v1h10v2L16 3Z"
-            />
-        </svg>
-    )
-}
-
 function NewsletterForm()
 {
+
+    const handleFooterRegisterLinkClick = () =>
+    {
+
+        sendGAEvent({
+            event: 'footer_apply_click',
+            link_name: 'Apply Now',
+            link_destination: 'https://mumbaihacks25-round1.devfolio.co/',
+        });
+
+    }
+
     return (
         <form className="max-w-sm">
-            <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+            <h2 className="font-display font-semibold text-neutral-950 text-sm tracking-wider">
                 Ready to be a part of MumbaiHacks 2025?
             </h2>
-            <p className="mt-4 text-sm text-neutral-700">
+            <p className="mt-4 text-neutral-700 text-sm">
                 Join the event and prepare to start building!
             </p>
             <Button
-                href="/"
-                className="mt-6 rounded-2xl bg-neutral-950 px-4 py-2 text-base font-semibold text-white transition hover:bg-neutral-800"
+                href="https://mumbaihacks25-round1.devfolio.co/"
+                onClick={() => handleFooterRegisterLinkClick()}
+                className="bg-neutral-950 hover:bg-neutral-800 mt-6 px-4 py-2 rounded-2xl font-semibold text-white text-base transition"
             >
                 Apply now for free!
             </Button>
-            {/* <div className="relative mt-6">
-        <input
-          type="email"
-          placeholder="Email address"
-          autoComplete="email"
-          aria-label="Email address"
-          className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pr-20 pl-6 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-hidden"
-        />
-        <div className="absolute inset-y-1 right-1 flex justify-end">
-          <button
-            type="submit"
-            aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
-          >
-            <ArrowIcon className="w-4" />
-          </button>
-        </div>
-      </div> */}
         </form>
     )
 }
@@ -119,19 +110,16 @@ function NewsletterForm()
 export function Footer()
 {
     return (
-        <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
+        <Container as="footer" className="mt-24 sm:mt-32 lg:mt-40 w-full">
             <FadeIn>
-                <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+                <div className="gap-x-8 gap-y-16 grid grid-cols-1 lg:grid-cols-2">
                     <Navigation />
                     <div className="flex lg:justify-end">
                         <NewsletterForm />
                     </div>
                 </div>
-                <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
-                    {/* <Link href="/" aria-label="Home">
-                        <Logo className="h-8" fillOnHover />
-                    </Link> */}
-                    <p className="text-sm text-neutral-700">
+                <div className="flex flex-wrap justify-between items-end gap-x-6 gap-y-4 mt-24 mb-20 pt-12 border-neutral-950/10 border-t">
+                    <p className="text-neutral-700 text-sm">
                         © MumbaiHacks. {new Date().getFullYear()}
                     </p>
                 </div>

@@ -33,7 +33,7 @@ export function Offices({
     <ul role="list" {...props}>
       <li>
         <Office name="Participant details" invert={invert}>
-          Emails, LinkedIn, work / college details, and your team members phone numbers to send them the sign-up link!
+          Your email, LinkedIn, and work / college details. Once you&apos;ve signed up, create your team on Devfolio and invite your teammates to join.
         </Office>
       </li>
       {/* <li>
