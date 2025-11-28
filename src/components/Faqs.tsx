@@ -33,22 +33,16 @@ export default function Faqs()
                 </p>
             </SectionIntro>
             <Container className="mt-16">
-                <div className="lg:flex lg:justify-end lg:items-center">
-                    <div className="flex justify-center lg:justify-end lg:pr-12 lg:w-1/2">
-                        <FadeIn className="flex-none w-135 lg:w-180">
-                            <StylizedImage
-                                src={imageFaq}
-                                sizes="(min-width: 1024px) 41rem, 31rem"
-                                className="justify-center lg:justify-end"
-                            />
-                        </FadeIn>
-                    </div>
-                    <List className="mt-16 lg:mt-0 lg:pl-4 lg:w-1/2 lg:min-w-132">
+                <div className="lg:justify-end lg:items-start lg:gap-x-20 lg:grid lg:grid-cols-2">
+                    <List className="mt-16 lg:mt-0">
 
+                        <ListItem title="Who can participate">
+                            MumbaiHacks is a free, open-for-all hackathon, regardless of experience level, background, or expertise. As long as you&apos;re over 18, and want to break boundaries, we&apos;ll be happy to have you.
+                        </ListItem>
                         <ListItem title="What is the format of this year's MumbaiHacks">
-                            MumbaiHacks 2025 will have an online round in the month of August,
-                            where participants can submit their projects online.
-                            The top teams will be selected to participate in the final round, which will be held in Mumbai on October 4th-5th, 2025.
+                            MumbaiHacks 2025 will have an shortlisting round in the month of August,
+                            where participants can submit their solution ideas online.
+                            The top teams will be selected to participate in the final round, which will be held in Mumbai on November 28th and 29th, 2025.
                             The final round will be a 24-hour hackathon where teams will continue building their projects from Round 1 and present them to the judges.
                         </ListItem>
                         <ListItem title="Is the event free to attend">
@@ -56,17 +50,35 @@ export default function Faqs()
                             everyone to apply and participate. MumbaiHacks has always
                             been a free event, and we want to keep it that way.
                         </ListItem>
-                        <ListItem title="Who can participate">
-                            MumbaiHacks is open to everyone who loves to build, regardless of their
-                            background or experience level. Whether you are a beginner or an
-                            experienced hacker, we welcome you to join us and showcase your
-                            skills.
-                        </ListItem>
                         <ListItem title="What are the prizes">
                             We have some exciting prizes lined up for the winners of MumbaiHacks.
                             The details of the prizes will be announced closer to the event date,
                             so stay tuned!
                         </ListItem>
+                        <ListItem title="Can I change my team">
+                            Teams created during the online round cannot be modified. If your team is selected for the in-person round and changes are required, come to the event with your final team and notify our registration desk.
+                        </ListItem>
+                    </List>
+                    <List className="mt-16 lg:mt-0">
+                        <ListItem title="Can I change my problem statement">
+                            Problem statement selection can only be changed until the final day of the online round. Post-that, your problem statement is final and needs to match what you build on-ground.
+                        </ListItem>
+                        <ListItem title="Can I edit my project after submission">
+                            Projects submitted to the online round can be edited until the final day of submission.
+                        </ListItem>
+                        <ListItem title="Where can I get future updates for the event">
+                            On our <a>WhatsApp channel!</a> So, bring your teams over to the channel too.
+                        </ListItem>
+                        <ListItem title="Can I participate solo">
+                            Solo participants aren&apos;t allowed. All participants must be part of a team, ranging from a size of 2-4 team members.
+                        </ListItem>
+                        <ListItem title="How will teams be shortlisted">
+                            For the online round, all submissions will be evaluated on the basis of the solution outline.
+                        </ListItem>
+                        <ListItem title="Can I attend the on-ground event if I&apos;m not shortlisted">
+                            Unfortunately the venue can only accommodate a fixed number of teams, so only shortlisted participants can attend the final round.
+                        </ListItem>
+
                     </List>
                 </div>
             </Container>

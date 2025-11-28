@@ -11,11 +11,12 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
-import { Logo } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 import logoMiM from '@/images/logo_mim_dark.svg'
 import logoTEAM from '@/images/logo_team_dark.svg'
+import logoHCLProgress from '@/images/hcl.svg'
+import logoMsins from '@/images/msins.svg'
 
 const RootLayoutContext = createContext<{
     logoHovered: boolean
@@ -61,22 +62,35 @@ function Header({
 
     return (
         <Container>
-            <div className="flex flex-wrap items-center gap-x-16 gap-y-8 justify-between">
-                <Link
+            <div className="flex flex-wrap justify-between items-center gap-x-16 py-8">
+
+                <div className='flex flex-row items-center gap-x-8 w-auto'>
+                    <Image src={logoTEAM} alt="TEAM" width={150} height={150} className="w-auto h-8 lg:h-12" unoptimized />
+                    <Image src={logoMiM} alt="MumbaiHacks" width={150} height={150} className="ml-1 w-auto h-9 lg:h-13" unoptimized />
+                </div>
+
+                <div className='items-center gap-x-4 grid grid-cols-2 mt-8 lg:mt-0'>
+                    <span className='pl-1.5 text-white text-xs lg:text-base'>Presented by</span>
+                    <span className='pl-1.5 text-white text-xs lg:text-base'>State Partner</span>
+                    <Image src={logoHCLProgress} alt="HCL" width={180} className='' />
+                    <Image src={logoMsins} alt="HCL" width={180} className='' />
+                </div>
+
+                {/* <Link
                     href="/"
                     aria-label="Home"
                     onMouseEnter={() => setLogoHovered(true)}
                     onMouseLeave={() => setLogoHovered(false)}
-                    className='w-xs lg:w-sm grid grid-cols-1'
+                    className='grid grid-cols-1 w-xs lg:w-sm'
                 >
-                    <Logo className="w-full sm:block" invert={invert} filled={logoHovered} />
+                    <Logo className="sm:block w-full" invert={invert} filled={logoHovered} />
 
-                </Link>
-                <div className='flex w-auto flex-row items-center gap-x-5'>
-                    <Image src={logoTEAM} alt="TEAM" width={100} height={100} className="h-7 lg:h-9 w-auto" unoptimized />
-                    <span>x</span>
-                    <Image src={logoMiM} alt="MumbaiHacks" width={100} height={100} className="h-8 lg:h-10 w-auto ml-1" unoptimized />
-                </div>
+                    <div className='hidden lg:flex items-center gap-x-2 mt-4'>
+                        <span>Presented by</span>
+                        <Image src={logoHCLProgress} alt="HCL" width={220} className='' />
+                    </div>
+
+                </Link> */}
 
                 {/* <div className="flex items-center gap-x-8">
                     
@@ -91,14 +105,14 @@ function Header({
                         aria-expanded={expanded ? 'true' : 'false'}
                         aria-controls={panelId}
                         className={clsx(
-                            'group -m-2.5 rounded-full p-2.5 transition duration-400 ease-out cursor-pointer',
+                            'group -m-2.5 p-2.5 rounded-full transition duration-400 ease-out cursor-pointer',
                             invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
                         )}
                         aria-label="Toggle navigation"
                     >
                         <Icon
                             className={clsx(
-                                'h-6 w-6',
+                                'w-6 h-6',
                                 invert
                                     ? 'fill-white group-hover:fill-neutral-200'
                                     : 'fill-neutral-950 group-hover:fill-neutral-700',
@@ -114,7 +128,7 @@ function Header({
 function NavigationRow({ children }: { children: React.ReactNode })
 {
     return (
-        <div className="even:mt-px sm:bg-neutral-950">
+        <div className="sm:bg-neutral-950 even:mt-px">
             <Container>
                 <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
             </Container>
@@ -133,10 +147,10 @@ function NavigationItem({
     return (
         <Link
             href={href}
-            className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+            className="group isolate relative bg-neutral-950 -mx-6 sm:mx-0 sm:even:mt-0 even:mt-px px-6 sm:px-0 py-10 sm:py-16 sm:odd:pr-16 sm:even:pl-16 sm:even:border-neutral-800 sm:even:border-l"
         >
             {children}
-            <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
+            <span className="group-odd:right-0 group-even:left-0 -z-10 absolute inset-y-0 bg-neutral-900 opacity-0 group-hover:opacity-100 w-screen transition" />
         </Link>
     )
 }
@@ -144,7 +158,7 @@ function NavigationItem({
 function Navigation()
 {
     return (
-        <nav className="my-px font-display text-5xl font-medium tracking-tight text-white">
+        <nav className="my-px font-display font-medium text-white text-5xl tracking-tight">
             <NavigationRow>
                 <NavigationItem href="/work">Our Work</NavigationItem>
                 <NavigationItem href="/about">About Us</NavigationItem>
@@ -197,76 +211,42 @@ function RootLayoutInner({ children }: { children: React.ReactNode })
         >
             <header>
                 <div
-                    className="absolute top-2 right-0 left-0 z-40 pt-14"
+                    className="top-2 right-0 left-0 z-40 absolute pt-14"
                     aria-hidden={expanded ? 'true' : undefined}
-                    // @ts-ignore (https://github.com/facebook/react/issues/17157)
-                    inert={expanded ? '' : undefined}
+                // @ts-ignore (https://github.com/facebook/react/issues/17157)
                 >
-                    <Header
-                        panelId={panelId}
-                        icon={MenuIcon}
-                        toggleRef={openRef}
-                        expanded={expanded}
-                        onToggle={() =>
-                        {
-                            setIsTransitioning(true)
-                            setExpanded((expanded) => !expanded)
-                            window.setTimeout(() =>
-                                closeRef.current?.focus({ preventScroll: true }),
-                            )
-                        }}
-                    />
+
                 </div>
 
-                <motion.div
-                    layout
-                    id={panelId}
-                    style={{ height: expanded ? 'auto' : '0.5rem' }}
-                    className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
-                    aria-hidden={expanded ? undefined : 'true'}
-                    // @ts-ignore (https://github.com/facebook/react/issues/17157)
-                    inert={expanded ? undefined : ''}
-                >
-                    <motion.div layout className="bg-neutral-800">
-                        <div ref={navRef} className="bg-neutral-950 py-8">
-                            <Header
-                                invert
-                                panelId={panelId}
-                                icon={XIcon}
-                                toggleRef={closeRef}
-                                expanded={expanded}
-                                onToggle={() =>
-                                {
-                                    setIsTransitioning(true)
-                                    setExpanded((expanded) => !expanded)
-                                    window.setTimeout(() =>
-                                        openRef.current?.focus({ preventScroll: true }),
-                                    )
-                                }}
-                            />
-                        </div>
-                        <Navigation />
-
-                    </motion.div>
-                </motion.div>
+                <Header
+                    panelId={panelId}
+                    icon={MenuIcon}
+                    toggleRef={openRef}
+                    expanded={expanded}
+                    onToggle={() =>
+                    {
+                        setIsTransitioning(true)
+                        setExpanded((expanded) => !expanded)
+                        window.setTimeout(() =>
+                            closeRef.current?.focus({ preventScroll: true }),
+                        )
+                    }}
+                />
             </header>
+
+
 
             <motion.div
                 layout
-                style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-                className="relative flex flex-auto overflow-hidden bg-white pt-14"
+                className="relative flex flex-auto overflow-hidden"
             >
                 <motion.div
                     layout
-                    className="relative isolate flex w-full flex-col pt-9"
+                    className="isolate relative flex flex-col pt-9 w-full"
                 >
-                    <GridPattern
-                        className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full mask-[linear-gradient(to_bottom_left,white_40%,transparent_50%)] fill-neutral-50 stroke-neutral-950/5"
-                        yOffset={-96}
-                        interactive
-                    />
 
-                    <main className="w-full flex-auto">{children}</main>
+
+                    <main className="flex-auto w-full">{children}</main>
 
                     <Footer />
                 </motion.div>
