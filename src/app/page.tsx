@@ -340,13 +340,13 @@ function LinkCards()
                                 Hackathon Help
                             </h3>
                             <div className='flex flex-col gap-y-4 mt-6'>
-                                <a href='https://docs.google.com/document/d/1QgEsxP_6ekHjR9CSlcOAiS1OdDVqdjPLHkWJdFWi92k/edit?usp=sharing' className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                <a href='https://docs.google.com/document/d/1QgEsxP_6ekHjR9CSlcOAiS1OdDVqdjPLHkWJdFWi92k/edit?usp=sharing' target='_blank' className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
                                     Code of Conduct
                                 </a>
-                                <a href='https://docs.google.com/document/d/1TG_JIbWDmOU5dO7b--FyGM3FhPlN1onjUcjB6xUQvR4/edit?usp=sharing' className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                <a href='https://docs.google.com/document/d/1TG_JIbWDmOU5dO7b--FyGM3FhPlN1onjUcjB6xUQvR4/edit?usp=sharing' target='_blank' className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
                                     FAQs
                                 </a>
-                                <a href='mailto:hi@mumbaihacks.com' className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                <a href='mailto:hi@mumbaihacks.com' target='_blank' className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
                                     Contact the Team
                                 </a>
                             </div>

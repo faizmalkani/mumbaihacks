@@ -61,7 +61,7 @@ function Navigation()
                                     <Link
                                         href={link.href}
                                         onClick={() => handleFooterNavLinkClick(link.title, link.href)}
-                                        className="hover:text-neutral-950 transition duration-400" >
+                                        className="hover:text-neutral-400 transition duration-400" >
                                         {link.title}
                                     </Link>
                                 </li>
