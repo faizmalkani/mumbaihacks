@@ -319,14 +319,14 @@ function LinkCards()
                                 Build and Submission
                             </h3>
                             <div className='flex flex-col gap-y-4 mt-6'>
+                                <a href='https://forms.gle/thYQPWTtHzs441zH9' target='_blank' className='font-display font-semibold text-sky-600 hover:text-sky-900 lg:text-base text-lg transition-colors duration-300'>
+                                    Submission Form
+                                </a>
                                 <a href='https://mumbaihacks.com/mentorship' target='_blank' className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
                                     Request a Mentor
                                 </a>
                                 <a href='https://docs.google.com/presentation/d/1pPclSSu0DNVrl6flU1yFYNFrDCGfQuMqKrwujRJl7DI/edit?usp=sharing' target='_blank' className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
                                     Presentation Template
-                                </a>
-                                <a href='https://forms.gle/AkK2MobuvYuhfHmu9' target='_blank' className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
-                                    Submission Form
                                 </a>
                                 <a href='https://docs.google.com/document/d/1scEZsEWMRK0sm2u1JlUhAskGQ5J0EC5ZXm5TtJubick/edit?usp=sharing' target='_blank' className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
                                     Build Rules
@@ -358,6 +358,96 @@ function LinkCards()
     )
 }
 
+function ResultCards()
+{
+    return (
+        <>
+            <Container className="mt-12 lg:mt-24">
+                <p className='mx-auto mb-8 w-full font-semibold text-white text-xl text-center'>Shortlisted Teams</p>
+                <FadeInStagger className="gap-8 grid grid-cols-1 lg:grid-cols-3">
+                    
+                    <FadeIn className="flex">
+                        <article className="relative flex flex-col bg-white hover:bg-neutral-50 p-6 sm:p-8 rounded-3xl ring-1 ring-neutral-950/15 w-full transition">
+                            <h3 className='font-display font-semibold text-neutral-950 text-2xl'>
+                                Fintech
+                            </h3>
+                            <div className='flex flex-col gap-y-4 mt-6'>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                            </div>
+                        </article>
+                    </FadeIn>
+
+                    <FadeIn className="flex">
+                        <article className="relative flex flex-col bg-white hover:bg-neutral-50 p-6 sm:p-8 rounded-3xl ring-1 ring-neutral-950/15 w-full transition">
+                            <h3 className='font-display font-semibold text-neutral-950 text-2xl'>
+                                Healthtech
+                            </h3>
+                            <div className='flex flex-col gap-y-4 mt-6'>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                            </div>
+                        </article>
+                    </FadeIn>
+
+                    <FadeIn className="flex">
+                        <article className="relative flex flex-col bg-white hover:bg-neutral-50 p-6 sm:p-8 rounded-3xl ring-1 ring-neutral-950/15 w-full transition">
+                            <h3 className='font-display font-semibold text-neutral-950 text-2xl'>
+                                Misinformation
+                            </h3>
+                            <div className='flex flex-col gap-y-4 mt-6'>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                                <span className='font-display font-semibold text-neutral-950 hover:text-neutral-500 lg:text-base text-lg transition-colors duration-300'>
+                                    Team Name
+                                </span>
+                            </div>
+                        </article>
+                    </FadeIn>
+                    
+                </FadeInStagger>
+            </Container>
+        </>
+    )
+}
+
+
 export const metadata: Metadata = {
     description:
         'MumbaiHacks is the largest hackathon in India, bringing together developers, designers, and innovators to build amazing projects in just 24 hours.',
@@ -380,6 +470,8 @@ export default async function Home()
             {/* <Timelines /> */}
 
             {/* <CaseStudies caseStudies={caseStudies} /> */}
+
+            {/* <ResultCards /> */}
 
             <LinkCards />
 
